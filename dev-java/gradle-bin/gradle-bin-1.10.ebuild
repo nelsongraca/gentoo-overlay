@@ -5,44 +5,51 @@ EAPI="5"
 
 inherit java-pkg-2
 
+MY_PN=${PN%%-bin}
+MY_P="${MY_PN}-${PV}"
+
 DESCRIPTION="A project automation and build tool similar to Apache Ant and Apache Maven with a Groovy based DSL"
-SRC_URI="http://services.gradle.org/distributions/${P}-src.zip"
+SRC_URI="http://services.gradle.org/distributions/${MY_P}-all.zip"
 HOMEPAGE="http://www.gradle.org/"
 LICENSE="Apache-2.0"
 SLOT="${PV}"
-KEYWORDS=""
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="app-arch/zip
 	app-admin/eselect-gradle"
 RDEPEND=">=virtual/jdk-1.5"
 
-#IUSE="doc"
+IUSE="source doc examples"
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/${MY_P}"
 
 
 src_unpack() {
 	unpack ${A}
 }
 
-src_prepare() {
-	sed -i 's/org.gradle.api.internal.Contextual/org.gradle.internal.exceptions.Contextual/' ${S}/buildSrc/src/main/groovy/org/gradle/build/docs/DocGenerationException.java || die
-}
-
-src_compile() {
-	# if use docs; then
-	# 	gradle docs
-	# fi
-	gradle --gradle-user-home ${WORKDIR} install -Pgradle_installPath=dist || die
-}
 
 src_install() {
-	cd dist || die
-	dodoc changelog.txt getting-started.html
-
 	local gradle_dir="${EROOT}usr/share/${PN}-${SLOT}"
 
+	dodoc changelog.txt getting-started.html
+
 	insinto "${gradle_dir}"
+
+	# source
+	if use source ; then
+		java-pkg_dosrc src/*
+	fi
+
+	# docs
+	if use doc ; then
+		java-pkg_dojavadoc docs
+	fi
+
+	# examples
+	if use examples ; then
+		java-pkg_doexamples samples
+	fi
 
 	# jars in lib/
 	# Note that we can't strip the version from the gradle jars,
