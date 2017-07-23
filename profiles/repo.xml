@@ -2,13 +2,13 @@
 <!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
 <repositories xmlns="" version="1.0">
   <repo quality="experimental" status="unofficial">
-    <name><![CDATA[lonewolf4]]></name>
-    <description lang="en"><![CDATA[LoneWolf gentoo-overlay]]></description>
-    <homepage>https://github.com/LoneWolf4/gentoo-overlay</homepage>
+    <name><![CDATA[nelson.graca]></name>
+    <description lang="en"><![CDATA[Nelson Graça gentoo-overlay]]></description>
+    <homepage>https://github.com/nelsongraca/gentoo-overlay</homepage>
     <owner type="person">
       <name><![CDATA[Lone Wolf]]></name>
     </owner>
-    <source type="git">https://github.com/LoneWolf4/gentoo-overlay.git</source>
-    <feed>https://github.com/LoneWolf4/gentoo-overlay/commits/master.atom</feed>
+    <source type="git">https://github.com/nelsongraca/gentoo-overlay.git</source>
+    <feed>https://github.com/nelsongraca/gentoo-overlay/commits/master.atom</feed>
   </repo>
 </repositories>
