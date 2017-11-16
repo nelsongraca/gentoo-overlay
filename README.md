@@ -1,4 +1,4 @@
-LoneWolf Gentoo Overlay
+NG Gentoo Overlay
 ==============
 
 This overlay contains some packages that I needed at least once, so I am sharing them here just in case someone else needs them.
@@ -8,6 +8,6 @@ To add this overlay just edit __/etc/layman/layman.cfg__ and add the following u
 Example:
 
     overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
-                https://raw.github.com/lonewolf4/gentoo-overlay/master/profiles/repo.xml
+                https://raw.github.com/nelsongraca/gentoo-overlay/master/profiles/repo.xml
 
-Then just add it with __layman -a lonewolf4__
+Then just add it with __layman -a ng__
