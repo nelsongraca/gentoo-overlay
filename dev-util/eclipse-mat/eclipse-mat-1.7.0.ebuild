@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=6
+EAPI=5
 inherit eutils
 
 DESCRIPTION="Eclipse Memory Analyzer can be used to view Heapdumps of Java programs"
@@ -15,7 +15,7 @@ KEYWORDS="amd64"
 
 RDEPEND=">=virtual/jre-1.7"
 
-S="${WORKDIR}"
+S="${WORKDIR}/mat"
 
 src_install() {
 	local dir="/opt/${PN}"
