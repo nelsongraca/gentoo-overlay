@@ -13,7 +13,7 @@ RESTRICT="strip mirror"
 RDEPEND=">=virtual/jre-1.6"
 
 INSTALLDIR="/opt/SoapUI"
-S="${WORKDIR}/SoapUI-${PV}-EB"
+S="${WORKDIR}/SoapUI-${PV}"
 
 src_install() {
 	# application
