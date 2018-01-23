@@ -8,7 +8,7 @@ HOMEPAGE="http://www.soapui.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-SRC_URI="https://s3.amazonaws.com/downloads.eviware/soapuios/${PV}/SoapUI-${PV}-EB-linux-bin.tar.gz"
+SRC_URI="https://s3.amazonaws.com/downloads.eviware/soapuios/${PV}/SoapUI-${PV}-linux-bin.tar.gz"
 RESTRICT="strip mirror"
 RDEPEND=">=virtual/jre-1.6"
 
