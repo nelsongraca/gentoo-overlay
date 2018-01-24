@@ -15,6 +15,13 @@ RDEPEND=">=virtual/jre-1.6"
 INSTALLDIR="/opt/SoapUI"
 S="${WORKDIR}/SoapUI-${PV}"
 
+src_prepare() {
+	# log to console only
+	sed -i -e 's/ref="ERRORFILE"/ref="CONSOLE"/' -e 's/ref="FILE"/ref="CONSOLE"/' -e 's/ref="GLOBAL_GROOVY_LOG"/ref="CONSOLE"/' "bin/soapui-log4j.xml"
+	rm bin/*.log
+	eapply_user
+}
+
 src_install() {
 	# application
 	insinto ${INSTALLDIR}
