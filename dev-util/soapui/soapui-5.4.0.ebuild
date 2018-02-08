@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit eutils
+
 DESCRIPTION="The Swiss-Army Knife for SOAP Testing"
 HOMEPAGE="http://www.soapui.org/"
 LICENSE="LGPL-2.1"
@@ -26,6 +28,7 @@ src_install() {
 	# application
 	insinto ${INSTALLDIR}
 	doins -r Tutorials bin lib wsi-test-tools soapui-settings.xml
+	newins "${FILESDIR}/icon.png" icon.png
 
 	# binaries
 	chmod 755 "${D}/${INSTALLDIR}/bin/loadtestrunner.sh"
@@ -39,4 +42,7 @@ src_install() {
 	# default docs
 	dodoc README.md
 	dodoc RELEASENOTES.txt
+	
+	#menu
+	domenu ${FILESDIR}/soapui.desktop 
 }

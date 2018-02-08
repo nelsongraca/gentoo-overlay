@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SoapUI
+Icon=/opt/SoapUI/icon.png
+Exec="/opt/SoapUI/bin/soapui.sh"
+Categories=Development;
+Terminal=false
+StartupWMClass=insomnia
+Comment=
+StartupNotify=false
