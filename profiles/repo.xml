@@ -2,13 +2,15 @@
 <!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
 <repositories xmlns="" version="1.0">
   <repo quality="experimental" status="unofficial">
-    <name><![CDATA[ng]]></name>
-    <description lang="en"><![CDATA[NG gentoo-overlay]]></description>
+    <name>nelson-graca</name>
+    <description lang="en">Nelson Graça personal Overlay</description>
     <homepage>https://github.com/nelsongraca/gentoo-overlay</homepage>
     <owner type="person">
-      <name><![CDATA[Nelson Graça]]></name>
+      <email>graca.nelson@gmail.com</email>
+      <name>Nelson Graça</name>
     </owner>
     <source type="git">https://github.com/nelsongraca/gentoo-overlay.git</source>
+    <source type="git">git+ssh://git@github.com/nelsongraca/gentoo-overlay.git</source>
     <feed>https://github.com/nelsongraca/gentoo-overlay/commits/master.atom</feed>
   </repo>
 </repositories>
