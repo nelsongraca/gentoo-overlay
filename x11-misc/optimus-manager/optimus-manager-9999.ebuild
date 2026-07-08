@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_SINGLE_IMPL=1
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{11,12,13} )
+PYTHON_COMPAT=( python3_{14,15} )
 
 inherit distutils-r1 git-r3
 
@@ -26,6 +26,7 @@ DEPEND="
 	sys-apps/pciutils
 	x11-apps/xrandr
 	x11-apps/mesa-progs
+	dev-python/gpep517
 "
 RDEPEND="
 	${DEPEND}
